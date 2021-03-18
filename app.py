@@ -8,18 +8,14 @@ app = flask.Flask(__name__)
 def post_param_branch():
     param = flask.request.form['param']
     if True:
-        # ruleid: os-system-injection
         os.system(param)
 
 @app.route("/ok")
 def ok():
-    # ok: os-system-injection
     os.system("This is fine")
 
-@app.route("filter")
-def filter():
-    # ok: open-redirect
-    next_page = request.args.get('next')
-    if not next_page or url_parse(next_page).netloc != '':
-        next_page = url_for('main.index')
-    return redirect(next_page)
+@app.route("open_redirect/")
+def open_redirect():
+    url = request.args.get("url")
+    print("something")
+    return redirect(url)
