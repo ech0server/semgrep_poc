@@ -7,8 +7,8 @@
 name: Semgrep
 
 on:
-  push:
-    branches: [ develop ]
+  # push:
+    # branches: [ develop ]
   pull_request:
     # The branches below must be a subset of the branches above
     branches: [ master ]
