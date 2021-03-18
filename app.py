@@ -24,3 +24,5 @@ def open_redirect():
 def get_param_percent_format():
     param = flask.request.args.get("param")
     eval("import %s" % (param,))
+
+    #add changes
