@@ -9,7 +9,9 @@ name: Semgrep
 on:
   #push:
     #branches: [ develop ]
-  pull_request: {}
+  pull_request:
+    branches:
+      - main
 
 jobs:
   semgrep:
