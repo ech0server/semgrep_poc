@@ -19,7 +19,7 @@ def open_redirect():
     url = request.args.get("url")
     print("something")
     return redirect(url)
-
+# Other test
 @app.route("/get_param_percent_format", methods=["GET"])
 def get_param_percent_format():
     param = flask.request.args.get("param")
